@@ -1,20 +1,20 @@
 #!/usr/bin/env python3
+"""Class BasicCache"""
 
 BaseCaching = __import__('base_caching').BaseCaching
 
 
 class BasicCache(BaseCaching):
-    """BaseCaching (Parent class)"""
-    def __init__(self):
-        super().__init__()
+    """Class BasicCache is a caching system"""
 
     def put(self, key, item):
-        """Put a item"""
-        if key and item:
-            self.cache_data.update({key: item})
+        """Method put"""
+        if key is not None and item is not None:
+            self.cache_data[key] = item
 
     def get(self, key):
-        """Return a value linked to a key"""
-        if key in self.cache_data:
+        """Method get"""
+        if key is not None and key in self.cache_data:
             return self.cache_data[key]
-        return None
+        else:
+            return None
