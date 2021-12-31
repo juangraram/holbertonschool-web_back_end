@@ -1,6 +1,4 @@
-#!/usr/bin/node
-function displayMessage(greeting) {
-    console.log(greeting);
+function displayMessage(str) {
+    console.log(str);
 }
-
 module.exports = displayMessage;
